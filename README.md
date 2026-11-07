@@ -44,7 +44,11 @@ Estas imágenes no están licenciadas, están referenciadas por hotlink a los se
 
 El logo y la imagen de astronauta de Wizor Space sí son propios y pueden quedarse.
 
-Dos caminos para resolver el resto: pedir licencia a Novespace y a Zero-G, o enviar un fotógrafo a la primera campaña. Lo segundo es preferible — fotos propias con investigadores latinoamericanos a bordo valen bastante más.
+**La vía más barata para resolverlo es el contrato con Air Zero G que está en curso:** conviene negociar los derechos de uso de material gráfico dentro de ese acuerdo (fotos, video, logos y guía de marca). Con eso cubierto, las imágenes de Zero-G se reemplazan por las de Air Zero G, que va a ser el operador ancla. A mediano plazo, lo mejor sigue siendo material propio: fotos con investigadores latinoamericanos a bordo valen bastante más que las de cualquier operador.
+
+### Sobre el descargo de afiliación
+
+El pie tenía la línea «Wizor Space no está afiliada a ninguno de esos operadores». Se quitó a propósito: deja de ser cierta al firmar con Air Zero G. Una vez firmado conviene reemplazarla por lo contrario —«Órbita Cero opera con Air Zero G / Novespace»—, que es un argumento de venta y no un descargo: es el único dato de la página que un investigador no puede verificar por su cuenta. Mientras tanto la maqueta no debe circular fuera del equipo, porque lleva fotos de ambos operadores sin licencia ni aclaración.
 
 ## Pendientes de contenido
 
