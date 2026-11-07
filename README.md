@@ -1,45 +1,58 @@
-# Órbita Cero
+# Órbita Cero — Wizor Space
 
-Maqueta de landing page y research de mercado para el proyecto **Latam to Zero G**: comercialización de acceso a vuelos parabólicos (gravedad cero) para empresas, investigadores y universidades de América Latina.
+Maqueta de landing page y research de mercado del programa de acceso a microgravedad de **Wizor Space** para empresas, investigadores y universidades de América Latina.
 
 ## Contenido
 
 | Archivo | Qué es |
 |---|---|
-| `index.html` | Maqueta de la landing page, v2. Autocontenida: un solo archivo con HTML, CSS y JS inline. |
+| `index.html` | Maqueta de la landing, v3. Autocontenida: un solo archivo con HTML, CSS y JS inline. |
 | `docs/investigacion-mercado.md` | Investigación de mercado: proveedores, usuarios, experimentos, oportunidad Latam, productos, modelo de negocio y pricing. Con fuentes citadas. |
 
-Para ver la landing, abrir `index.html` en cualquier navegador. No requiere build ni dependencias.
+Para verla, abrir `index.html` en cualquier navegador. No requiere build ni dependencias.
 
-## ⚠️ Antes de publicar: las imágenes no están licenciadas
+## Arquitectura de marca
 
-La maqueta usa **fotografías y un video de terceros**, tomados de los sitios públicos de Novespace / Air Zero G y de Zero Gravity Corporation, **solo como referencia visual para el equipo de diseño**. La mayoría de las fotos de Zero-G son de Steve Boxall.
+Marca endosada: **Wizor Space** es la casa, **Órbita Cero** es el programa. El lockup del encabezado y el pie es el logo de Wizor Space, un separador y la palabra ÓRBITA CERO. En el habla queda «Órbita Cero, de Wizor Space»; el título de la página es «Órbita Cero — Wizor Space». No se usa «Wizor Space Órbita Cero» como cadena única.
 
-Estas imágenes:
+## Sistema visual heredado de space.wizor.io
 
-- **no están licenciadas** para nuestro uso;
-- están referenciadas por hotlink a los servidores de origen, no alojadas acá;
-- deben reemplazarse por material propio o licenciado antes de cualquier publicación.
+Los tokens salieron de los estilos reales del sitio padre, no de una aproximación:
 
-La página muestra una franja de advertencia amarilla en la parte superior justamente para que nadie la confunda con algo publicable. **No activar GitHub Pages ni ningún otro hosting sobre este repositorio mientras esa franja siga ahí.**
+| Token | Valor | Origen |
+|---|---|---|
+| `--bg` | `#000000` | Wizor `--bg-color` |
+| `--panel` | `#050505` | Wizor `--glass-bg` |
+| `--line` | `#222222` | Wizor `--glass-border` |
+| `--text` | `#ffffff` | Wizor `--text-main` |
+| `--muted` | `#b8b8b8` | Wizor `--text-muted` |
+| `--body` | `#d1d5db` | Wizor, color de párrafo |
+| `--wz` | `#4ade80` | Wizor `--wizor-green` — foco y hover, mismo rol funcional que en el padre |
+| `--oc` | `#ff5a1f` | acento propio de Órbita Cero |
 
-Dos caminos para resolverlo: pedir licencia a Novespace y a Zero-G, o enviar un fotógrafo a la primera campaña. Lo segundo es preferible — fotos propias con investigadores latinoamericanos a bordo valen bastante más que las suyas.
+- **Tipografía:** Space Grotesk 400/700 para todo lo display, en mayúsculas; Inter 300/400/600 para texto corrido. Son las dos familias del sitio padre.
+- **Botones:** sin radio, borde de 1 px, mayúsculas, Space Grotesk 600, `letter-spacing: 2px`, `padding: 16px 32px`. Calcados del padre; el relleno sólido va en naranja en lugar de blanco, que es donde Órbita Cero se distingue.
+- **Etiquetas de sección:** Space Grotesk en mayúsculas con `letter-spacing: 3px`, el mismo patrón que el `.rm-meta` del roadmap de Wizor.
+
+**Para volver la página monocroma como el padre**, cambiar `--oc` por `#4ade80` y `--oc-soft` por `#bbf7d0` en `:root`. Es un solo lugar.
+
+## ⚠️ Antes de publicar: hay imágenes sin licenciar
+
+La maqueta usa **fotografías y un video de terceros**, tomados de los sitios públicos de Novespace / Air Zero G y de Zero Gravity Corporation, **sólo como referencia visual para el equipo de diseño**. La mayoría de las fotos de Zero-G son de Steve Boxall.
+
+Estas imágenes no están licenciadas, están referenciadas por hotlink a los servidores de origen y deben reemplazarse por material propio o licenciado antes de cualquier publicación. **No activar GitHub Pages ni ningún otro hosting sobre este repositorio mientras siga la franja amarilla de advertencia en el encabezado.**
+
+El logo y la imagen de astronauta de Wizor Space sí son propios y pueden quedarse.
+
+Dos caminos para resolver el resto: pedir licencia a Novespace y a Zero-G, o enviar un fotógrafo a la primera campaña. Lo segundo es preferible — fotos propias con investigadores latinoamericanos a bordo valen bastante más.
 
 ## Pendientes de contenido
 
-- **Los tres nombres del equipo**, con foto real y la credencial del astronauta. Hoy la sección dice `[Nombre]` y es el bloque más importante de la página.
-- **Nombre comercial definitivo.** «Órbita Cero» es un placeholder.
-- **Precios.** Los valores de las tarjetas de inversión son una propuesta calculada sobre un margen del 20–25% por encima de los precios públicos de los operadores. Hay que validarlos contra los costos reales una vez negociada la capacidad.
+- **Los tres nombres de la tripulación**, con foto real y la credencial del astronauta. Hoy la sección dice `[Nombre]` y es el bloque más importante de la página.
+- **Validar la sección de telemetría.** Afirma que podemos instrumentar a los investigadores que vuelan con la stack de Wizor. Es una propuesta: hay que confirmar que el hardware puede volar y pasar el expediente de seguridad del operador antes de ofrecerlo en firme.
+- **Precios.** Son una propuesta calculada sobre un margen del 20–25% por encima de los precios públicos de los operadores. Validar contra costos reales una vez negociada la capacidad.
 - **Ancla de comparación con la ISS** en la sección de inversión: falta un número público y defendible del costo de poner un experimento en la estación espacial.
-
-## Notas de diseño
-
-Variantes de titular alternativas, si el equipo quiere testear otro registro (basta con cambiar el `<h1>`):
-
-- `La gravedad dejó de ser el límite de tu laboratorio` — más épico, menos concreto.
-- `Veintidós segundos sin gravedad, y tu experimento adentro` — más técnico, mejor para un público de investigadores puros.
-
-El SVG del perfil de la parábola y el esquema de la cabina son originales y sí son de uso libre.
+- **Wizor Education.** El concurso «Tu tesis en gravedad cero» y la cátedra deberían integrarse al programa educativo que ya existe, no correr aparte.
 
 ## Dato de contexto que define la estrategia
 
