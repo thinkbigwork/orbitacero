@@ -13,13 +13,13 @@ Para verla, abrir `index.html` en cualquier navegador. No requiere build ni depe
 
 ## Idiomas
 
-La página está en español, inglés y portugués, con selector en la barra superior. Al entrar por primera vez detecta el idioma del navegador (`pt*` → portugués, `es*` → español, cualquier otro → inglés) y después recuerda la elección en `localStorage`.
+La página está en español, inglés, portugués y francés, con selector en la barra superior. El francés importa: Novespace, el operador del A310, es francesa. Al entrar por primera vez detecta el idioma del navegador (`pt*` → portugués, `es*` → español, `fr*` → francés, cualquier otro → inglés) y después recuerda la elección en `localStorage`.
 
 **El español del HTML es la fuente de verdad.** No hay tres archivos ni tres copias del texto: el HTML está escrito en español y el diccionario, al final del `<script>`, traduce usando ese español como clave. Las traducciones cubren el texto visible, los textos dentro de los SVG, las etiquetas y opciones del formulario, los `alt` y `aria-label`, el `<title>` y la descripción.
 
 Para **cambiar un texto**: editarlo en el HTML y actualizar esa misma clave en `DICT.en` y `DICT.pt`. Si la clave del diccionario deja de coincidir con el HTML, ese bloque simplemente se queda en español — falla de forma visible, no silenciosa.
 
-Para **agregar un idioma**: sumar una entrada a `DICT`, un botón al `.langsel` y las tres cadenas a `META`.
+Para **agregar un idioma**: sumar una entrada a `DICT`, un botón al `.langsel` y las tres cadenas a `META`. Ojo con la barra superior: cada idioma nuevo la ensancha, así que hay que medir que no se corte entre 1330 y 1920 px, que es donde los enlaces están visibles.
 
 ## Arquitectura de marca
 
